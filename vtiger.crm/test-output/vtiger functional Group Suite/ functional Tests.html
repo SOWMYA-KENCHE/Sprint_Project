@@ -1,0 +1,272 @@
+<html>
+<head>
+<title>TestNG:   functional Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'> functional Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>15/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Oct 18 21:31:28 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>550 seconds (550724 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>functional </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='crm.vtiger.Products.Functional_TestCase_Products.duplicateProduct()'><b>duplicateProduct</b><br>Test class: crm.vtiger.Products.Functional_TestCase_Products<br/>
+<a href="#Output-1632716597" onClick='toggleBox("Output-1632716597", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1632716597" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1632716597">
+User is successfully logged in with valid credentials<br/>
+Original product created successfully<br/>
+Product duplicated successfully<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>crm.vtiger.Products.Functional_TestCase_Products@3d34d211</td></tr>
+<tr>
+<td title='crm.vtiger.Email.Functional_TestCase_Email.verifyEmailpage()'><b>verifyEmailpage</b><br>Test class: crm.vtiger.Email.Functional_TestCase_Email<br/>
+<a href="#Output-576261694" onClick='toggleBox("Output-576261694", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-576261694" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-576261694">
+User logged in successfully<br/>
+Emailpage is displayed successfully<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>crm.vtiger.Email.Functional_TestCase_Email@41a2befb</td></tr>
+<tr>
+<td title='crm.vtiger.Products.Functional_TestCase_Products.createOpportunityWithValidValues()'><b>createOpportunityWithValidValues</b><br>Test class: crm.vtiger.Products.Functional_TestCase_Products<br/>
+<a href="#Output-925024581" onClick='toggleBox("Output-925024581", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-925024581" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-925024581">
+User is successfully logged in with valid credentials<br/>
+product created successfully<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>crm.vtiger.Products.Functional_TestCase_Products@3d34d211</td></tr>
+<tr>
+<td title='crm.vtiger.Login.Negative_TestCase_Login.blankspaceUsernameAndPassword()'><b>blankspaceUsernameAndPassword</b><br>Test class: crm.vtiger.Login.Negative_TestCase_Login<br/>
+<a href="#Output-1843207249" onClick='toggleBox("Output-1843207249", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1843207249" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1843207249">
+user not logged in because of blank username and password - NT02 Passed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>crm.vtiger.Login.Negative_TestCase_Login@69453e37</td></tr>
+<tr>
+<td title='crm.vtiger.Documents.Functional_TestCase_Doc.createDocumentWithAllFields()'><b>createDocumentWithAllFields</b><br>Test class: crm.vtiger.Documents.Functional_TestCase_Doc<br/>
+<a href="#Output-2092066079" onClick='toggleBox("Output-2092066079", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2092066079" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2092066079">
+User is successfully logged in with valid credentials<br/>
+Document created successfully with all fields<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>crm.vtiger.Documents.Functional_TestCase_Doc@682b2fa</td></tr>
+<tr>
+<td title='crm.vtiger.Login.Functional_TestCase_Login.validLogin()'><b>validLogin</b><br>Test class: crm.vtiger.Login.Functional_TestCase_Login<br/>
+<a href="#Output-245220560" onClick='toggleBox("Output-245220560", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-245220560" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-245220560">
+User is successfully logged in with valid credentials - F01 Passed<br/>
+</div>
+</td>
+<td></td>
+<td>38</td>
+<td>crm.vtiger.Login.Functional_TestCase_Login@6200f9cb</td></tr>
+<tr>
+<td title='crm.vtiger.Opportunities.Negative_TestCase_Oppo.createOpportunityWithNegativeVlaues()'><b>createOpportunityWithNegativeVlaues</b><br>Test class: crm.vtiger.Opportunities.Negative_TestCase_Oppo<br/>
+<a href="#Output-658369552" onClick='toggleBox("Output-658369552", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-658369552" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-658369552">
+User is successfully logged in with valid credentials<br/>
+Opportunity cannot be done with negative values<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>crm.vtiger.Opportunities.Negative_TestCase_Oppo@63475ace</td></tr>
+<tr>
+<td title='crm.vtiger.Opportunities.Functional_TestCase_Opp.createOpportunityWithValidValues()'><b>createOpportunityWithValidValues</b><br>Test class: crm.vtiger.Opportunities.Functional_TestCase_Opp<br/>
+<a href="#Output-2084634607" onClick='toggleBox("Output-2084634607", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2084634607" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2084634607">
+User is successfully logged in with valid credentials<br/>
+Opportunity created successfully<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>crm.vtiger.Opportunities.Functional_TestCase_Opp@22fcf7ab</td></tr>
+<tr>
+<td title='crm.vtiger.Products.Functional_TestCase_Products.verifyproductpage()'><b>verifyproductpage</b><br>Test class: crm.vtiger.Products.Functional_TestCase_Products<br/>
+<a href="#Output-1794705481" onClick='toggleBox("Output-1794705481", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1794705481" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1794705481">
+User is successfully logged in with valid credentials<br/>
+product page successfully opened<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>crm.vtiger.Products.Functional_TestCase_Products@3d34d211</td></tr>
+<tr>
+<td title='crm.vtiger.Opportunities.Functional_TestCase_Opp.opportunityPageOpen()'><b>opportunityPageOpen</b><br>Test class: crm.vtiger.Opportunities.Functional_TestCase_Opp<br/>
+<a href="#Output-37528429" onClick='toggleBox("Output-37528429", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-37528429" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-37528429">
+User is successfully logged in with valid credentials<br/>
+Opportunity page successfully opened<br/>
+</div>
+</td>
+<td></td>
+<td>44</td>
+<td>crm.vtiger.Opportunities.Functional_TestCase_Opp@22fcf7ab</td></tr>
+<tr>
+<td title='crm.vtiger.Products.Negative_TestCase_Products.nonNumericUnitPrice()'><b>nonNumericUnitPrice</b><br>Test class: crm.vtiger.Products.Negative_TestCase_Products<br/>
+<a href="#Output-1915193269" onClick='toggleBox("Output-1915193269", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1915193269" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1915193269">
+User is successfully logged in with valid credentials<br/>
+Product form remains displayed after entering a non-numeric price<br/>
+</div>
+</td>
+<td></td>
+<td>41</td>
+<td>crm.vtiger.Products.Negative_TestCase_Products@4009e306</td></tr>
+<tr>
+<td title='crm.vtiger.Login.Functional_TestCase_Login.verifyPasswordMasking()'><b>verifyPasswordMasking</b><br>Test class: crm.vtiger.Login.Functional_TestCase_Login<br/>
+<a href="#Output-1332439166" onClick='toggleBox("Output-1332439166", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1332439166" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1332439166">
+password masking is verified - F02 Passed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>crm.vtiger.Login.Functional_TestCase_Login@6200f9cb</td></tr>
+<tr>
+<td title='crm.vtiger.Documents.Negative_TestCase_Doc.uploadOversizedFile()'><b>uploadOversizedFile</b><br>Test class: crm.vtiger.Documents.Negative_TestCase_Doc<br/>
+<a href="#Output-1734902032" onClick='toggleBox("Output-1734902032", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1734902032" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1734902032">
+User is successfully logged in with valid credentials<br/>
+large file size was rejected<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>crm.vtiger.Documents.Negative_TestCase_Doc@24313fcc</td></tr>
+<tr>
+<td title='crm.vtiger.Login.Negative_TestCase_Login.validUsernameWrongPassword()'><b>validUsernameWrongPassword</b><br>Test class: crm.vtiger.Login.Negative_TestCase_Login<br/>
+<a href="#Output-980326486" onClick='toggleBox("Output-980326486", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-980326486" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-980326486">
+User is not successfully logged in with valid username and incorrect password - NT01 Passed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>crm.vtiger.Login.Negative_TestCase_Login@69453e37</td></tr>
+<tr>
+<td title='crm.vtiger.Opportunities.Negative_TestCase_Oppo.createOpportunityWithoutrelatingto()'><b>createOpportunityWithoutrelatingto</b><br>Test class: crm.vtiger.Opportunities.Negative_TestCase_Oppo<br/>
+<a href="#Output-1538883559" onClick='toggleBox("Output-1538883559", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1538883559" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1538883559">
+User is successfully logged in with valid credentials<br/>
+Opportunity cannot be done without relatedto<br/>
+</div>
+</td>
+<td></td>
+<td>39</td>
+<td>crm.vtiger.Opportunities.Negative_TestCase_Oppo@63475ace</td></tr>
+</table><p>
+</body>
+</html>

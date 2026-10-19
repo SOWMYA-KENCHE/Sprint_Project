@@ -1,0 +1,604 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>24/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Oct 18 20:21:43 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>1113 seconds (1113969 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='crm.vtiger.Email.Smoke_TestCase_Email.verifyComposePageControls()'><b>verifyComposePageControls</b><br>Test class: crm.vtiger.Email.Smoke_TestCase_Email<br/>
+<a href="#Output-1099685353" onClick='toggleBox("Output-1099685353", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1099685353" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1099685353">
+User logged in successfully<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#parent_name&quot;}
+  (Session info: chrome=155.0.8059.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.46.0&apos;, revision: &apos;df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4c31dc7848f90156e5f11de0f5899700, findElement {value=parent_name, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.85, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49996}, goog:processID: 21164, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49996/devtoo..., se:cdpVersion: 155.0.8059.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c31dc7848f90156e5f11de0f5899700
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:626)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:173)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:406)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:400)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+	at objRepo.Email_Compose_Page.isToDisplayed(Email_Compose_Page.java:115)
+	at crm.vtiger.Email.Smoke_TestCase_Email.verifyComposePageControls(Smoke_TestCase_Email.java:38)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1099685353", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1099685353'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#parent_name&quot;}
+  (Session info: chrome=155.0.8059.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.46.0&apos;, revision: &apos;df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4c31dc7848f90156e5f11de0f5899700, findElement {value=parent_name, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.85, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49996}, goog:processID: 21164, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49996/devtoo..., se:cdpVersion: 155.0.8059.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c31dc7848f90156e5f11de0f5899700
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:626)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:173)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:406)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:400)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+	at objRepo.Email_Compose_Page.isToDisplayed(Email_Compose_Page.java:115)
+	at crm.vtiger.Email.Smoke_TestCase_Email.verifyComposePageControls(Smoke_TestCase_Email.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>51</td>
+<td>crm.vtiger.Email.Smoke_TestCase_Email@1fa121e2</td></tr>
+<tr>
+<td title='crm.vtiger.Opportunities.Functional_TestCase_Opp.deleteOpportunity()'><b>deleteOpportunity</b><br>Test class: crm.vtiger.Opportunities.Functional_TestCase_Opp<br/>
+<a href="#Output-1645181497" onClick='toggleBox("Output-1645181497", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1645181497" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1645181497">
+User is successfully logged in with valid credentials<br/>
+Opportunity found before deletion<br/>
+Delete confirmation prompt displayed: Are you sure you want to delete the selected 1 records?<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Opportunity was not deleted successfully expected [false] but found [true]
+	at crm.vtiger.Opportunities.Functional_TestCase_Opp.deleteOpportunity(Functional_TestCase_Opp.java:119)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1645181497", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1645181497'><pre>java.lang.AssertionError: Opportunity was not deleted successfully expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at crm.vtiger.Opportunities.Functional_TestCase_Opp.deleteOpportunity(Functional_TestCase_Opp.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>44</td>
+<td>crm.vtiger.Opportunities.Functional_TestCase_Opp@62ddbd7e</td></tr>
+<tr>
+<td title='crm.vtiger.Documents.Integration_TestCase_Doc.verifyDocumentAddedFromOrganization()'><b>verifyDocumentAddedFromOrganization</b><br>Test class: crm.vtiger.Documents.Integration_TestCase_Doc<br/>
+<a href="#Output-222122132" onClick='toggleBox("Output-222122132", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-222122132" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-222122132">
+User is successfully logged in with valid credentials<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for objRepo.Common_Page$$Lambda/0x000002471235bb68@279e1422
+(tried for 15 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.46.0&apos;, revision: &apos;df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.85, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:23648}, goog:processID: 12024, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:23648/devtoo..., se:cdpVersion: 155.0.8059.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 64e02ec2baa145de9ced3414b35ef0ba
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at objRepo.Common_Page.clickRecord(Common_Page.java:114)
+	at crm.vtiger.Documents.Integration_TestCase_Doc.verifyDocumentAddedFromOrganization(Integration_TestCase_Doc.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace222122132", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace222122132'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for objRepo.Common_Page$$Lambda/0x000002471235bb68@279e1422
+(tried for 15 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.46.0&apos;, revision: &apos;df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.85, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:23648}, goog:processID: 12024, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:23648/devtoo..., se:cdpVersion: 155.0.8059.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 64e02ec2baa145de9ced3414b35ef0ba
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at objRepo.Common_Page.clickRecord(Common_Page.java:114)
+	at crm.vtiger.Documents.Integration_TestCase_Doc.verifyDocumentAddedFromOrganization(Integration_TestCase_Doc.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>56</td>
+<td>crm.vtiger.Documents.Integration_TestCase_Doc@179ece50</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='crm.vtiger.Products.Negative_TestCase_Products.saveWithoutProductName()'><b>saveWithoutProductName</b><br>Test class: crm.vtiger.Products.Negative_TestCase_Products<br/>
+<a href="#Output-904808047" onClick='toggleBox("Output-904808047", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-904808047" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-904808047">
+User is successfully logged in with valid credentials<br/>
+Product cannot be saved without product name<br/>
+</div>
+</td>
+<td></td>
+<td>41</td>
+<td>crm.vtiger.Products.Negative_TestCase_Products@217ed35e</td></tr>
+<tr>
+<td title='crm.vtiger.Products.Functional_TestCase_Products.verifyproductpage()'><b>verifyproductpage</b><br>Test class: crm.vtiger.Products.Functional_TestCase_Products<br/>
+<a href="#Output-569022831" onClick='toggleBox("Output-569022831", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-569022831" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-569022831">
+User is successfully logged in with valid credentials<br/>
+product page successfully opened<br/>
+</div>
+</td>
+<td></td>
+<td>39</td>
+<td>crm.vtiger.Products.Functional_TestCase_Products@7dcf94f8</td></tr>
+<tr>
+<td title='crm.vtiger.Products.Integration_TestCase_Products.linkProductToVendor()'><b>linkProductToVendor</b><br>Test class: crm.vtiger.Products.Integration_TestCase_Products<br/>
+<a href="#Output-43402513" onClick='toggleBox("Output-43402513", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-43402513" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-43402513">
+User logged in successfully<br/>
+Product is linked to vendor: AutoVendor812<br/>
+</div>
+</td>
+<td></td>
+<td>43</td>
+<td>crm.vtiger.Products.Integration_TestCase_Products@662ac478</td></tr>
+<tr>
+<td title='crm.vtiger.Login.Negative_TestCase_Login.directModuleAccessWithoutLogin()'><b>directModuleAccessWithoutLogin</b><br>Test class: crm.vtiger.Login.Negative_TestCase_Login<br/>
+<a href="#Output-283920161" onClick='toggleBox("Output-283920161", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-283920161" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-283920161">
+Direct access requires valid credentials<br/>
+Access is denied before login and allowed after login - NT03 Passed<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>crm.vtiger.Login.Negative_TestCase_Login@3cd3e762</td></tr>
+<tr>
+<td title='crm.vtiger.Login.Integration_TestCase_Login.differentnmodulesession()'><b>differentnmodulesession</b><br>Test class: crm.vtiger.Login.Integration_TestCase_Login<br/>
+<a href="#Output-676089602" onClick='toggleBox("Output-676089602", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-676089602" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-676089602">
+User is successfully logged in with valid credentials<br/>
+The same logged-in session remains active  - IT01 Passed<br/>
+</div>
+</td>
+<td></td>
+<td>40</td>
+<td>crm.vtiger.Login.Integration_TestCase_Login@6f03482</td></tr>
+<tr>
+<td title='crm.vtiger.Email.System_TestCase_Email.verifyEmailWithCCAndBCC()'><b>verifyEmailWithCCAndBCC</b><br>Test class: crm.vtiger.Email.System_TestCase_Email<br/>
+<a href="#Output-1739653374" onClick='toggleBox("Output-1739653374", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1739653374" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1739653374">
+User logged in successfully<br/>
+Email saved and verified successfully<br/>
+</div>
+</td>
+<td></td>
+<td>46</td>
+<td>crm.vtiger.Email.System_TestCase_Email@682b2fa</td></tr>
+<tr>
+<td title='crm.vtiger.Products.Functional_TestCase_Products.duplicateProduct()'><b>duplicateProduct</b><br>Test class: crm.vtiger.Products.Functional_TestCase_Products<br/>
+<a href="#Output-1380271191" onClick='toggleBox("Output-1380271191", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1380271191" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1380271191">
+User is successfully logged in with valid credentials<br/>
+Original product created successfully<br/>
+Product duplicated successfully<br/>
+</div>
+</td>
+<td></td>
+<td>46</td>
+<td>crm.vtiger.Products.Functional_TestCase_Products@7dcf94f8</td></tr>
+<tr>
+<td title='crm.vtiger.Documents.Functional_TestCase_Doc.createDocumentWithAllFields()'><b>createDocumentWithAllFields</b><br>Test class: crm.vtiger.Documents.Functional_TestCase_Doc<br/>
+<a href="#Output-199628528" onClick='toggleBox("Output-199628528", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-199628528" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-199628528">
+User is successfully logged in with valid credentials<br/>
+Document created successfully with all fields<br/>
+</div>
+</td>
+<td></td>
+<td>43</td>
+<td>crm.vtiger.Documents.Functional_TestCase_Doc@9d5509a</td></tr>
+<tr>
+<td title='crm.vtiger.Opportunities.Integration_TestCase_Opp.TC_OPP_I01()'><b>TC_OPP_I01</b><br>Test class: crm.vtiger.Opportunities.Integration_TestCase_Opp<br/>
+<a href="#Output-224031437" onClick='toggleBox("Output-224031437", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-224031437" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-224031437">
+User is successfully logged in with valid credentials<br/>
+Opportunity created successfully<br/>
+Opportunity appears in organization<br/>
+</div>
+</td>
+<td></td>
+<td>48</td>
+<td>crm.vtiger.Opportunities.Integration_TestCase_Opp@3b0090a4</td></tr>
+<tr>
+<td title='crm.vtiger.Documents.Negative_TestCase_Doc.uploadOversizedFile()'><b>uploadOversizedFile</b><br>Test class: crm.vtiger.Documents.Negative_TestCase_Doc<br/>
+<a href="#Output-834043233" onClick='toggleBox("Output-834043233", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-834043233" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-834043233">
+User is successfully logged in with valid credentials<br/>
+large file size was rejected<br/>
+</div>
+</td>
+<td></td>
+<td>44</td>
+<td>crm.vtiger.Documents.Negative_TestCase_Doc@7eac9008</td></tr>
+<tr>
+<td title='crm.vtiger.Email.Negative_TestCase_Email.verifySaveEmailWithoutSubject()'><b>verifySaveEmailWithoutSubject</b><br>Test class: crm.vtiger.Email.Negative_TestCase_Email<br/>
+<a href="#Output-411272987" onClick='toggleBox("Output-411272987", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-411272987" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-411272987">
+User logged in successfully<br/>
+Checked save behavior without subject<br/>
+</div>
+</td>
+<td></td>
+<td>41</td>
+<td>crm.vtiger.Email.Negative_TestCase_Email@31190526</td></tr>
+<tr>
+<td title='crm.vtiger.Login.Functional_TestCase_Login.validLogin()'><b>validLogin</b><br>Test class: crm.vtiger.Login.Functional_TestCase_Login<br/>
+<a href="#Output-113653660" onClick='toggleBox("Output-113653660", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-113653660" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-113653660">
+User is successfully logged in with valid credentials - F01 Passed<br/>
+</div>
+</td>
+<td></td>
+<td>40</td>
+<td>crm.vtiger.Login.Functional_TestCase_Login@185a6e9</td></tr>
+<tr>
+<td title='crm.vtiger.Products.Negative_TestCase_Products.nonNumericUnitPrice()'><b>nonNumericUnitPrice</b><br>Test class: crm.vtiger.Products.Negative_TestCase_Products<br/>
+<a href="#Output-2140396878" onClick='toggleBox("Output-2140396878", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2140396878" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2140396878">
+User is successfully logged in with valid credentials<br/>
+Product form remains displayed after entering a non-numeric price<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>crm.vtiger.Products.Negative_TestCase_Products@217ed35e</td></tr>
+<tr>
+<td title='crm.vtiger.Login.Negative_TestCase_Login.validUsernameWrongPassword()'><b>validUsernameWrongPassword</b><br>Test class: crm.vtiger.Login.Negative_TestCase_Login<br/>
+<a href="#Output-1159348615" onClick='toggleBox("Output-1159348615", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1159348615" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1159348615">
+User is not successfully logged in with valid username and incorrect password - NT01 Passed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>crm.vtiger.Login.Negative_TestCase_Login@3cd3e762</td></tr>
+<tr>
+<td title='crm.vtiger.Login.Negative_TestCase_Login.blankspaceUsernameAndPassword()'><b>blankspaceUsernameAndPassword</b><br>Test class: crm.vtiger.Login.Negative_TestCase_Login<br/>
+<a href="#Output-1771811588" onClick='toggleBox("Output-1771811588", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1771811588" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1771811588">
+user not logged in because of blank username and password - NT02 Passed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>crm.vtiger.Login.Negative_TestCase_Login@3cd3e762</td></tr>
+<tr>
+<td title='crm.vtiger.Opportunities.Negative_TestCase_Oppo.createOpportunityWithNegativeVlaues()'><b>createOpportunityWithNegativeVlaues</b><br>Test class: crm.vtiger.Opportunities.Negative_TestCase_Oppo<br/>
+<a href="#Output-1337347604" onClick='toggleBox("Output-1337347604", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1337347604" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1337347604">
+User is successfully logged in with valid credentials<br/>
+Opportunity cannot be done with negative values<br/>
+</div>
+</td>
+<td></td>
+<td>43</td>
+<td>crm.vtiger.Opportunities.Negative_TestCase_Oppo@229f66ed</td></tr>
+<tr>
+<td title='crm.vtiger.Email.Functional_TestCase_Email.verifyEmailpage()'><b>verifyEmailpage</b><br>Test class: crm.vtiger.Email.Functional_TestCase_Email<br/>
+<a href="#Output-893721510" onClick='toggleBox("Output-893721510", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-893721510" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-893721510">
+User logged in successfully<br/>
+Emailpage is displayed successfully<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>crm.vtiger.Email.Functional_TestCase_Email@4116aac9</td></tr>
+<tr>
+<td title='crm.vtiger.Products.Functional_TestCase_Products.createOpportunityWithValidValues()'><b>createOpportunityWithValidValues</b><br>Test class: crm.vtiger.Products.Functional_TestCase_Products<br/>
+<a href="#Output-1822624650" onClick='toggleBox("Output-1822624650", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1822624650" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1822624650">
+User is successfully logged in with valid credentials<br/>
+product created successfully<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>crm.vtiger.Products.Functional_TestCase_Products@7dcf94f8</td></tr>
+<tr>
+<td title='crm.vtiger.Email.Integration_TestCase_Email.verifyContactIntegration()'><b>verifyContactIntegration</b><br>Test class: crm.vtiger.Email.Integration_TestCase_Email<br/>
+<a href="#Output-1586246816" onClick='toggleBox("Output-1586246816", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1586246816" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1586246816">
+User logged in successfully<br/>
+Contact integration verified<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>crm.vtiger.Email.Integration_TestCase_Email@3590fc5b</td></tr>
+<tr>
+<td title='crm.vtiger.Opportunities.Functional_TestCase_Opp.opportunityPageOpen()'><b>opportunityPageOpen</b><br>Test class: crm.vtiger.Opportunities.Functional_TestCase_Opp<br/>
+<a href="#Output-1654094587" onClick='toggleBox("Output-1654094587", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1654094587" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1654094587">
+User is successfully logged in with valid credentials<br/>
+Opportunity page successfully opened<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>crm.vtiger.Opportunities.Functional_TestCase_Opp@62ddbd7e</td></tr>
+<tr>
+<td title='crm.vtiger.Opportunities.System_TestCase_Oppo.systemforopportunities()'><b>systemforopportunities</b><br>Test class: crm.vtiger.Opportunities.System_TestCase_Oppo<br/>
+<a href="#Output-834837937" onClick='toggleBox("Output-834837937", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-834837937" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-834837937">
+User is successfully logged in with valid credentials<br/>
+Opportunity created<br/>
+Product selected<br/>
+Document added<br/>
+Opportunity stage changed to shutdown<br/>
+opportunities system  completed<br/>
+</div>
+</td>
+<td></td>
+<td>66</td>
+<td>crm.vtiger.Opportunities.System_TestCase_Oppo@74e52ef6</td></tr>
+<tr>
+<td title='crm.vtiger.Opportunities.Functional_TestCase_Opp.createOpportunityWithValidValues()'><b>createOpportunityWithValidValues</b><br>Test class: crm.vtiger.Opportunities.Functional_TestCase_Opp<br/>
+<a href="#Output-433115563" onClick='toggleBox("Output-433115563", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-433115563" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-433115563">
+User is successfully logged in with valid credentials<br/>
+Opportunity created successfully<br/>
+</div>
+</td>
+<td></td>
+<td>47</td>
+<td>crm.vtiger.Opportunities.Functional_TestCase_Opp@62ddbd7e</td></tr>
+<tr>
+<td title='crm.vtiger.Login.Functional_TestCase_Login.verifyPasswordMasking()'><b>verifyPasswordMasking</b><br>Test class: crm.vtiger.Login.Functional_TestCase_Login<br/>
+<a href="#Output-1211858372" onClick='toggleBox("Output-1211858372", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1211858372" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1211858372">
+password masking is verified - F02 Passed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>crm.vtiger.Login.Functional_TestCase_Login@185a6e9</td></tr>
+<tr>
+<td title='crm.vtiger.Opportunities.Negative_TestCase_Oppo.createOpportunityWithoutrelatingto()'><b>createOpportunityWithoutrelatingto</b><br>Test class: crm.vtiger.Opportunities.Negative_TestCase_Oppo<br/>
+<a href="#Output-2078887126" onClick='toggleBox("Output-2078887126", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2078887126" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2078887126">
+User is successfully logged in with valid credentials<br/>
+Opportunity cannot be done without relatedto<br/>
+</div>
+</td>
+<td></td>
+<td>43</td>
+<td>crm.vtiger.Opportunities.Negative_TestCase_Oppo@229f66ed</td></tr>
+</table><p>
+</body>
+</html>

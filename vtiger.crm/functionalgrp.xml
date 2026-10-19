@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="vtiger functional Group Suite">
+  <test name=" functional Tests">
+    <groups>
+            <run>
+                <include name="functional"/>
+            </run>
+        </groups>
+
+        <packages>
+            <package name="crm.vtiger.Documents"/>
+            <package name="crm.vtiger.Email"/> 
+            <package name="crm.vtiger.Login"/>
+            <package name="crm.vtiger.Products"/>
+            <package name="crm.vtiger.Opportunities"/>
+        </packages>
+
+    </test>
+
+</suite>
