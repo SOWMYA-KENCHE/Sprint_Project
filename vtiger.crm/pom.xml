@@ -33,7 +33,7 @@
 						<version>3.5.4</version>
 						<configuration>
 							<suiteXmlFiles>
-								<suiteXmlFile>CrossBrowser.xml</suiteXmlFile>
+								<suiteXmlFile>crossbrowser.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
@@ -104,7 +104,7 @@
 						<version>3.5.4</version>
 						<configuration>
 							<suiteXmlFiles>
-								<suiteXmlFile>Parallel.xml</suiteXmlFile>
+								<suiteXmlFile>parallel.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
