@@ -28,6 +28,20 @@ public class Negative_TestCase_Login extends BaseClassLogin
 		Assert.assertEquals(login.geterrorMessage(),"You must specify a valid username and password.");
         Reporter.log("User is not successfully logged in with valid username and incorrect password - NT01 Passed",true);
      }
+	@Test(groups = { "Negative", "functional" })
+    public void usernameWrongValidPassword() throws IOException, InterruptedException 
+    {
+        // Verify login
+		Login_Page login = new Login_Page(driver);
+		// data
+		DataFromExcelFile data = new DataFromExcelFile();
+        String username = data.getDataFromExcel("Login",1, 0)+"_"+System.currentTimeMillis();
+        String password = data.getDataFromExcel("Login",1, 2);
+		login.loginDetails(username,password);
+		System.out.println(login.geterrorMessage());
+		Assert.assertEquals(login.geterrorMessage(),"You must specify a valid username and password.");
+        Reporter.log("User is not successfully logged in with valid password and incorrect username - NT02 Passed",true);
+     }
 	
 	@Test(groups = { "Negative", "functional" })
     public void blankspaceUsernameAndPassword() throws IOException, InterruptedException 
@@ -45,7 +59,7 @@ public class Negative_TestCase_Login extends BaseClassLogin
         // Verify error
         Assert.assertEquals(login.geterrorMessage(),"You must specify a valid username and password.");
         Assert.assertFalse(driver.getCurrentUrl().contains("index&module"));
-        Reporter.log("user not logged in because of blank username and password - NT02 Passed",true);
+        Reporter.log("user not logged in because of blank username and password - NT03 Passed",true);
      }
 	
 	@Test(groups = { "negative", "integration"} )
@@ -68,7 +82,7 @@ public class Negative_TestCase_Login extends BaseClassLogin
 	    Opportunities_Page oppo = new  Opportunities_Page(driver);
 	    oppo.getOpportunitiesLink().click();
 	    Assert.assertTrue(oppo.getCreateOpportunityButton().isDisplayed());
-	    Reporter.log("Access is denied before login and allowed after login - NT03 Passed",true);    
+	    Reporter.log("Access is denied before login and allowed after login - NT04 Passed",true);    
      }
 
 }

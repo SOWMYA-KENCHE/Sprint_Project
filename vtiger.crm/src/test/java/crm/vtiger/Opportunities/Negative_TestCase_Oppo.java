@@ -13,8 +13,12 @@ import org.testng.annotations.Test;
 
 import base.BaseClassCrm;
 import base.BaseClassLogin;
+import genericUtility.DataFromExcelFile;
+import objRepo.Common_Page;
+import objRepo.Documents_Page;
 import objRepo.Home_Page;
 import objRepo.Opportunities_Create_Page;
+import objRepo.Opportunities_Details_Page;
 import objRepo.Opportunities_Page;
 
 public class Negative_TestCase_Oppo extends BaseClassCrm
@@ -93,5 +97,26 @@ public class Negative_TestCase_Oppo extends BaseClassCrm
 	        Assert.assertEquals(alertmsg, "Invalid Probability");
 	        Reporter.log("Opportunity cannot be done with negative values",true);
 	 }
+	 
+	 @Test(groups = {"negative","smoke"})
+	 public void withOutOppName() throws IOException, InterruptedException
+	    {
+	    	// Verify login
+	        Home_Page home = new Home_Page(driver);
+	        Assert.assertEquals(home.getCaltext().getText(),"Organizations");
+	        Reporter.log("User is successfully logged in with valid credentials",true);
+	        // Navigate to Opportunities page
+	        Opportunities_Page oppo = new Opportunities_Page(driver);
+	        oppo.getOpportunitiesLink().click();
+	        DataFromExcelFile file = new DataFromExcelFile();
+	        String name = file.getDataFromExcel("opportunities", 1, 0);
+	        oppo.getCreateOpportunityButton().click();
+	        Opportunities_Create_Page create = new Opportunities_Create_Page(driver);
+	        create.getSaveButton().click();
+	        String alertmsg = driver.switchTo().alert().getText();
+	        Assert.assertEquals(alertmsg, "Opportunity Name cannot be empty");
+	        Reporter.log("opportunity is not created without without opp name ",true);
+	    	
+	    }
 
 }

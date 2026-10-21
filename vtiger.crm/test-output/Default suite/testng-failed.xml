@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="crm.vtiger.Opportunities.Functional_TestCase_Opp">
+      <class name="crm.vtiger.Documents.Functional_TestCase_Doc">
         <methods>
           <include name="aftermethod"/>
-          <include name="deleteOpportunity"/>
+          <include name="editDocument"/>
           <include name="beforemethod"/>
         </methods>
-      </class> <!-- crm.vtiger.Opportunities.Functional_TestCase_Opp -->
+      </class> <!-- crm.vtiger.Documents.Functional_TestCase_Doc -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

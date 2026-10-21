@@ -36,5 +36,25 @@ public class Negative_TestCase_Doc extends BaseClassCrm
 	  //  Assert.assertTrue(docs.isFileSizeErrorDisplayed(),"Expected file-size validation message was not displayed");
 	    Reporter.log("large file size was rejected", true);
 	}
+	
+	@Test(groups = {"negative","smoke"} )
+	public void withoutTitle() throws IOException 
+	{
+		
+		// Verify login
+        Home_Page home = new Home_Page(driver);
+        Assert.assertTrue(home.getsearch().isDisplayed());
+        Reporter.log("User is successfully logged in with valid credentials",true);
+        String filePath = System.getProperty("user.dir")+ "/src/test/resources/sample.pdf";
+	    home.getdocumentslink().click();
+	    Documents_Page docs = new Documents_Page(driver);
+	    docs.clickCreateDocument();
+	    docs.chooseFile(filePath);
+	    docs.clickSave();
+	    String alert = driver.switchTo().alert().getText();
+	    System.out.println(alert);
+	    Assert.assertEquals(alert,"Title cannot be empty");
+	    Reporter.log("Documnet without title was rejected", true);
+	}
 
 }

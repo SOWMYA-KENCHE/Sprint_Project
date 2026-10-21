@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import base.BaseClassCrm;
 import genericUtility.DataFromExcelFile;
 import objRepo.Home_Page;
+import objRepo.Opportunities_Create_Page;
 import objRepo.Opportunities_Page;
 
 public class Smoke_TestCase_Oppo extends BaseClassCrm
@@ -33,5 +34,6 @@ public class Smoke_TestCase_Oppo extends BaseClassCrm
 	        Reporter.log("searched opportunity is displayed ",true);
 	    	
 	    }
+	 
 
 }

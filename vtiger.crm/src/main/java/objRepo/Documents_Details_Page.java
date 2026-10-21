@@ -25,6 +25,9 @@ public class Documents_Details_Page
 
     @FindBy(name = "Edit")
     private WebElement editBtn;
+    
+    @FindBy(xpath = "//input[@title='Edit [Alt+E]']")
+    private WebElement editBtn1;
 
     @FindBy(name = "Delete")
     private WebElement deleteBtn;
@@ -40,6 +43,11 @@ public class Documents_Details_Page
     public void clickEdit()      
     {
     	editBtn.click();
+    }
+    
+    public void clickEdit1()      
+    {
+    	editBtn1.click();
     }
     public void clickDelete()    
     {
