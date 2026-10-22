@@ -5,24 +5,24 @@
       <![CDATA[Login successful on chrome]]>
     </line>
     <line>
-      <![CDATA[User is successfully logged in with valid credentials]]>
+      <![CDATA[User logged in successfully]]>
     </line>
     <line>
-      <![CDATA[title edited]]>
+      <![CDATA[Email saved and verified successfully]]>
     </line>
     <line>
       <![CDATA[closing browser]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-10-21T17:22:19 IST" name="Default suite" finished-at="2026-10-21T17:23:01 IST" duration-ms="42474">
+  <suite started-at="2026-10-22T12:39:22 IST" name="Default suite" finished-at="2026-10-22T12:40:09 IST" duration-ms="46740">
     <groups>
-      <group name="functional">
-        <method signature="Functional_TestCase_Doc.editDocument()[pri:0, instance:crm.vtiger.Documents.Functional_TestCase_Doc@313ac989]" name="editDocument" class="crm.vtiger.Documents.Functional_TestCase_Doc"/>
-      </group> <!-- functional -->
+      <group name="system">
+        <method signature="System_TestCase_Email.verifyEmailWithCCAndBCC()[pri:0, instance:crm.vtiger.Email.System_TestCase_Email@18078bef]" name="verifyEmailWithCCAndBCC" class="crm.vtiger.Email.System_TestCase_Email"/>
+      </group> <!-- system -->
     </groups>
-    <test started-at="2026-10-21T17:22:19 IST" name="Default test" finished-at="2026-10-21T17:23:01 IST" duration-ms="42474">
-      <class name="crm.vtiger.Documents.Functional_TestCase_Doc">
-        <test-method is-config="true" signature="beforemethod(java.lang.String)[pri:0, instance:crm.vtiger.Documents.Functional_TestCase_Doc@313ac989]" started-at="2026-10-21T17:22:19 IST" name="beforemethod" finished-at="2026-10-21T17:22:52 IST" duration-ms="32820" status="PASS">
+    <test started-at="2026-10-22T12:39:22 IST" name="Default test" finished-at="2026-10-22T12:40:09 IST" duration-ms="46740">
+      <class name="crm.vtiger.Email.System_TestCase_Email">
+        <test-method is-config="true" signature="beforemethod(java.lang.String)[pri:0, instance:crm.vtiger.Email.System_TestCase_Email@18078bef]" started-at="2026-10-22T12:39:22 IST" name="beforemethod" finished-at="2026-10-22T12:40:00 IST" duration-ms="37689" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -36,24 +36,24 @@
             </line>
           </reporter-output>
         </test-method> <!-- beforemethod -->
-        <test-method signature="editDocument()[pri:0, instance:crm.vtiger.Documents.Functional_TestCase_Doc@313ac989]" started-at="2026-10-21T17:22:52 IST" name="editDocument" finished-at="2026-10-21T17:23:01 IST" duration-ms="9229" status="PASS">
+        <test-method signature="verifyEmailWithCCAndBCC()[pri:0, instance:crm.vtiger.Email.System_TestCase_Email@18078bef]" started-at="2026-10-22T12:40:00 IST" name="verifyEmailWithCCAndBCC" finished-at="2026-10-22T12:40:09 IST" duration-ms="8649" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[User is successfully logged in with valid credentials]]>
+              <![CDATA[User logged in successfully]]>
             </line>
             <line>
-              <![CDATA[title edited]]>
+              <![CDATA[Email saved and verified successfully]]>
             </line>
           </reporter-output>
-        </test-method> <!-- editDocument -->
-        <test-method is-config="true" signature="aftermethod()[pri:0, instance:crm.vtiger.Documents.Functional_TestCase_Doc@313ac989]" started-at="2026-10-21T17:23:01 IST" name="aftermethod" finished-at="2026-10-21T17:23:01 IST" duration-ms="342" status="PASS">
+        </test-method> <!-- verifyEmailWithCCAndBCC -->
+        <test-method is-config="true" signature="aftermethod()[pri:0, instance:crm.vtiger.Email.System_TestCase_Email@18078bef]" started-at="2026-10-22T12:40:09 IST" name="aftermethod" finished-at="2026-10-22T12:40:09 IST" duration-ms="327" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[closing browser]]>
             </line>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-      </class> <!-- crm.vtiger.Documents.Functional_TestCase_Doc -->
+      </class> <!-- crm.vtiger.Email.System_TestCase_Email -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

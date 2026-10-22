@@ -83,7 +83,8 @@ public class Common_Page
         addDocumentBtn.click();
     }
     
-    public boolean isTextPresent(String text) {
+    public boolean isTextPresent(String text) 
+    {
         return driver.findElements(
             By.xpath("//*[contains(normalize-space(text()),'" + text + "')]")
         ).size() > 0;

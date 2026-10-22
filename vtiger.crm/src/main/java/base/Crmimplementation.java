@@ -15,7 +15,8 @@ import genericUtility.ExplicitWait;
 import objRepo.Home_Page;
 import objRepo.Login_Page;
 
-public class Crmimplementation {
+public class Crmimplementation 
+{
 	
 	protected WebDriver driver = null;
 	DataFromPropertyFile cdata = new DataFromPropertyFile();
@@ -25,7 +26,7 @@ public class Crmimplementation {
 
 	    if (browser.equalsIgnoreCase("edge")) {
 
-	        driver = new ChromeDriver();
+	        driver = new EdgeDriver();
 
 	    } 
 	       
@@ -46,9 +47,9 @@ public class Crmimplementation {
 	        );
 	    }
 	}
-	// normal browser
-	
-	public void launchbrowser() throws IOException {
+	// normal base  browser
+	public void launchbrowser() throws IOException 
+	{
 
         String browser = cdata.getDataFromPropertyFile("Browser");
 

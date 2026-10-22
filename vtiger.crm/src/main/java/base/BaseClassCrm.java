@@ -34,7 +34,8 @@ public class BaseClassCrm
 	    @AfterMethod(groups =  {"smoke","functional","integration","system","negative"} )
 	    public void aftermethod() throws IOException, InterruptedException 
 	    {
-	        try {
+	       
+	    	try {
 	            if (driver != null &&
 	                driver.getCurrentUrl().contains("Home&action")) {
 
@@ -43,7 +44,7 @@ public class BaseClassCrm
 	            }
 	        }
 	        catch (Exception e) {
-	            Reporter.log("Logout skipped: " + e.getMessage(), true);
+	            Reporter.log("Logout skipped" + e.getMessage(), true);
 	        }
 	        finally {
 	            if (driver != null) {

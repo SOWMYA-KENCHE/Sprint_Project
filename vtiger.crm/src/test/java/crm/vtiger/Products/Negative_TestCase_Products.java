@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import base.BaseClassCrm;
 import genericUtility.DataFromExcelFile;
+import genericUtility.ScreenShotUtility1;
 import objRepo.Home_Page;
 import objRepo.Products_Create_Page;
 import objRepo.Products_Page;
@@ -58,6 +59,9 @@ public class Negative_TestCase_Products extends BaseClassCrm
         product.getCreateProduct().click();
         Products_Create_Page create = new Products_Create_Page(driver);
         create.clickSave();
+     // Take screenshot
+//    	ScreenShotUtility1 ss = new ScreenShotUtility1();
+//    	ss.takeScreenshot(driver, "productname");
         // alert 
         String alertmsg = driver.switchTo().alert().getText();
         Assert.assertEquals(alertmsg, "Product Name cannot be empty");

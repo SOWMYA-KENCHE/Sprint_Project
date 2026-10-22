@@ -25,7 +25,6 @@ public class Email_Page
     @FindBy(xpath = "//input[@name='find']")
     private WebElement find;
     
-
 	@FindBy(xpath = "//a[normalize-space()='To Contacts']")
 	private WebElement toContactsLink;
 	

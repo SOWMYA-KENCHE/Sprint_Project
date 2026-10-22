@@ -25,9 +25,6 @@ public class Home_Page
 	@FindBy(xpath = "//a[text()='Sign Out']")
 	private WebElement signout;
 	
-	@FindBy(xpath = "//a[text()='Organizations']")
-	private WebElement calendertext;
-	
 	@FindBy(xpath = "//a[normalize-space()='Products']")
 	private WebElement productlink;
 	
@@ -48,11 +45,13 @@ public class Home_Page
 	 
 	 @FindBy(name = "query_string")
 	 private WebElement search;
+	 
+	 @FindBy(xpath = "//a[text()='Organizations']")
+	 private WebElement calendertext;
 	
 	 // getters
-	 
-	 
-	 public WebElement getsearch() 
+	
+	 public WebElement getsearch()
 	 {
 			return search;
 	 }
@@ -98,11 +97,5 @@ public class Home_Page
 	public WebElement getCaltext() {
 		return calendertext;
 	}
-	
-	
-	
-	
-	
-	
    
 }

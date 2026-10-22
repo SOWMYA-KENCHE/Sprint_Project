@@ -27,7 +27,7 @@ public class BaseClassLogin
 
     @AfterMethod(groups =  {"smoke","functional","integration","system","negative"} )
     public void afterMethod() throws IOException, InterruptedException {
-        // close browser
+        // close the   browser
         if (driver != null) {
             C.executors("CLOSE_BROWSER");
         }

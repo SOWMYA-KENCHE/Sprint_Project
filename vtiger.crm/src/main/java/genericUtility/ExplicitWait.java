@@ -14,5 +14,4 @@ public class ExplicitWait
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
 		return wait.until(ExpectedConditions.visibilityOf(element));
 	}
-
 }

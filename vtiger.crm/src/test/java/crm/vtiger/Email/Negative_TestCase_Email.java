@@ -25,7 +25,8 @@ public class Negative_TestCase_Email extends BaseClassCrm
 	    Reporter.log("User logged in successfully", true);
 	    // Read data from Excel
 	    DataFromExcelFile file = new DataFromExcelFile();
-	    String to = file.getDataFromExcel("Email", 1, 1);
+	    String to = file.getDataFromExcel("Email", 1, 0);
+	    String contactname = file.getDataFromExcel("Email", 1, 1);
 	    String cc = file.getDataFromExcel("Email", 1, 2);
 	    String bcc = file.getDataFromExcel("Email", 1, 3);
 	    String message = file.getDataFromExcel("Email", 1, 5);
@@ -64,8 +65,8 @@ public class Negative_TestCase_Email extends BaseClassCrm
 	        }
 	    }
 	    Assert.assertNotNull(lookupWindow, "Contact lookup window did not open");
-	    compose.selectto(to);
-	    compose.selectContact(to);
+	    compose.selectContactSearch(to);
+	    compose.selectContact(contactname);
 	    // Return to Compose window
 	    driver.switchTo().window(composeWindow);
 	    compose.enterCC(cc);

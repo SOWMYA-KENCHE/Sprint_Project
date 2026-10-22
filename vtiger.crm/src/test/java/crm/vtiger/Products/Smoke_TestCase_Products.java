@@ -37,9 +37,6 @@ public class Smoke_TestCase_Products extends BaseClassCrm
 	    create.clickSave();
 	    home.getproductlink().click();
 	    product.getsearchfull(productname);
-//	    product.getsearch(productname);
-//	    product.getInproduct().click();
-//	    product.getSearchnow().click();
 	    Common_Page common = new Common_Page(driver);
 	    common.clickRecord(productname);
 	    Products_Details_Page details = new Products_Details_Page(driver);

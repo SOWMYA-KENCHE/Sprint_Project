@@ -1,10 +1,17 @@
 package crm.vtiger.Email;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Set;
 
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import base.BaseClassCrm;
@@ -15,18 +22,17 @@ import objRepo.Email_Compose_Page;
 
 public class Integration_TestCase_Email extends BaseClassCrm
 {
-	 @Test(groups = "integration")
-	    public void verifyContactIntegration()
-	            throws IOException
+	 @Test(dataProvider ="emailsaves",groups = "integartion")
+	 public void verifyContactIntegration(String contact,String contactname,String toEmail,String ccEmail,
+		        String subject,
+		        String message,
+		        String additionalField)
+	            throws IOException, InterruptedException
 	    {
 		 	// Verify login
 		    Home_Page home = new Home_Page(driver);
 		    Assert.assertTrue(home.getsearch().isDisplayed());
 		    Reporter.log("User logged in successfully", true);
-	        DataFromExcelFile file = new DataFromExcelFile();
-	        String contact = file.getDataFromExcel("Email", 1, 1);
-	        String subject = file.getDataFromExcel("Email", 1, 4);
-	        String message = file.getDataFromExcel("Email", 1, 5);
 	        // Store original Emails window
 	        String emailWindow = driver.getWindowHandle();
 	        home.getemaillink().click();
@@ -49,9 +55,7 @@ public class Integration_TestCase_Email extends BaseClassCrm
 	        // Open Contact lookup
 	        Set<String> composeWindows = driver.getWindowHandles();
 	        compose.getcreateto().click();
-
 	        String lookupWindow = null;
-
 	        for (String window : driver.getWindowHandles())
 	        {
 	            if (!composeWindows.contains(window))
@@ -62,17 +66,15 @@ public class Integration_TestCase_Email extends BaseClassCrm
 	            }
 	        }
 	        Assert.assertNotNull(lookupWindow, "Contact lookup window did not open");
-	        compose.selectto(contact);
-	        compose.selectContact(contact);
+	        compose.selectContactSearch(contact);
+	        compose.selectContact(contactname);
 	        // Return to Compose
 	        driver.switchTo().window(composeWindow);
 	        compose.enterSubject(subject);
 	        compose.enterMessage(message);
-	        // Save email without sending
 	        compose.getsavebtn();
 	        // Return to original window
 	        Set<String> openWindows = driver.getWindowHandles();
-
 	        Assert.assertTrue(openWindows.contains(emailWindow),"Original Emails window was closed");
 	        driver.switchTo().window(emailWindow);
 	        // Navigate to To Contacts
@@ -81,8 +83,30 @@ public class Integration_TestCase_Email extends BaseClassCrm
 	        // Search 
 	        emails.emailfind(subject);
 	        Assert.assertTrue(emails.getfoundfindvalue(subject).isDisplayed(),"Saved email was not found in To Contacts");
-
 	        Reporter.log("Contact integration verified",true);
+	    }
+	 
+	    @DataProvider
+	    public Object[][] emailsaves() throws EncryptedDocumentException, IOException
+	    {
+	    	FileInputStream file = new FileInputStream("./src/test/resources/testcase.xlsx");
+	    	
+	    	Workbook wb = WorkbookFactory.create(file);
+	    	Sheet sh = wb.getSheet("Email");
+	    	int rowcount =sh.getLastRowNum();
+	    	int cellcount = sh.getRow(0).getLastCellNum();
+	    	Object[][] obj = new Object[rowcount][cellcount];
+	    	DataFormatter df = new DataFormatter();
+	    	for(int i=1;i<=rowcount;i++)
+	    	{
+	    		for(int j=0;j<cellcount;j++)
+	    		{
+	    			obj[i-1][j] = df.formatCellValue(sh.getRow(i).getCell(j));
+	    		}
+	    	}
+	    	wb.close();
+	    	file.close();
+	    	return obj;
 	    }
    
 }

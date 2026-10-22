@@ -25,6 +25,18 @@ public class Email_Compose_Page
     @FindBy(id = "parent_name")
     private WebElement toField;
     
+    @FindBy(xpath = "//input[@name='search_text']")
+    private WebElement searchbtn;
+    
+    @FindBy(xpath = "//select[@name='search_field']")
+    private WebElement inlastname;
+    
+    @FindBy(xpath = "//option[@label='First Name']")
+    private WebElement firstnameincontact;
+    
+    @FindBy(xpath = "//input[@type='button']")
+    private WebElement contactsearch;
+    
     @FindBy(xpath = "//img[@alt='Select']")
     private WebElement createto;
 
@@ -90,6 +102,14 @@ public class Email_Compose_Page
         driver.findElement(
             By.xpath("//a[normalize-space()='" + name + "']")
         ).click();
+    }
+    
+    public void selectContactSearch(String name)
+    {
+    	searchbtn.sendKeys(name);
+    	inlastname.click();
+    	firstnameincontact.click();
+    	contactsearch.click();
     }
     
     public WebElement getcreateto()

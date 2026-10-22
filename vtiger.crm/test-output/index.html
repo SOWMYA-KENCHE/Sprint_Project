@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\HP\AppData\Local\Temp\testng-eclipse-546720798\testng-customsuite.xml</span>
+                    <span>C:\Users\HP\AppData\Local\Temp\testng-eclipse--1381005144\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="crm.vtiger.Documents.Functional_TestCase_Doc" class="method navigator-link" hash-for-method="editDocument">editDocument</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="crm.vtiger.Email.System_TestCase_Email" class="method navigator-link" hash-for-method="verifyEmailWithCCAndBCC">verifyEmailWithCCAndBCC</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,14 +121,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">crm.vtiger.Documents.Functional_TestCase_Doc</span>
+              <span class="class-name">crm.vtiger.Email.System_TestCase_Email</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="editDocument">
-                  </a> <!-- editDocument -->
-                  <span class="method-name">editDocument</span>
+                  <a name="verifyEmailWithCCAndBCC">
+                  </a> <!-- verifyEmailWithCCAndBCC -->
+                  <span class="method-name">verifyEmailWithCCAndBCC</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +136,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\HP\AppData\Local\Temp\testng-eclipse-546720798\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\HP\AppData\Local\Temp\testng-eclipse--1381005144\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,11 +145,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;crm.vtiger.Documents.Functional_TestCase_Doc&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;editDocument&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- crm.vtiger.Documents.Functional_TestCase_Doc --&gt;
+      &lt;class name=&quot;crm.vtiger.Email.System_TestCase_Email&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -174,10 +170,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">functional</span>
+              <span class="test-group-name">system</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">editDocument</span>
+                <span class="method-in-group-name">verifyEmailWithCCAndBCC</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -199,14 +195,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'editDocument')
-data.setCell(0, 2, 'crm.vtiger.Documents.Functional_TestCase_Doc')
-data.setCell(0, 3, 9229);
+data.setCell(0, 1, 'verifyEmailWithCCAndBCC')
+data.setCell(0, 2, 'crm.vtiger.Email.System_TestCase_Email')
+data.setCell(0, 3, 8649);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -218,26 +214,19 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">editDocument</span>
+              <span class="reporter-method-name">verifyEmailWithCCAndBCC</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">User is successfully logged in with valid credentials</span>
-                <span class="reporter-method-output">title edited</span>
+                <span class="reporter-method-output">User logged in successfully</span>
+                <span class="reporter-method-output">Email saved and verified successfully</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">crm.vtiger.Documents.Functional_TestCase_Doc</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">createDocumentWithAllFields</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -246,18 +235,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">crm.vtiger.Documents.Functional_TestCase_Doc</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">crm.vtiger.Email.System_TestCase_Email</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforemethod(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">editDocument</span>
-                <span class="method-start">32821 ms</span>
+                <span class="method-name">verifyEmailWithCCAndBCC</span>
+                <span class="method-start">37690 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">aftermethod</span>
-                <span class="method-start">42057 ms</span>
+                <span class="method-start">46347 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

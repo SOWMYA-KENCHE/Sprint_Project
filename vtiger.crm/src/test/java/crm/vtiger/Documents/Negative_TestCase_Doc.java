@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import base.BaseClassCrm;
 import genericUtility.DataFromExcelFile;
+import genericUtility.ScreenShotUtility1;
 import objRepo.Documents_Page;
 import objRepo.Home_Page;
 
@@ -32,8 +33,11 @@ public class Negative_TestCase_Doc extends BaseClassCrm
 	    docs.chooseFile(filePath);
 	    String alert = driver.switchTo().alert().getText();
 	    System.out.println(alert);
+//	    // Take screenshot
+//    	ScreenShotUtility1 ss = new ScreenShotUtility1();
+//    	ss.takeScreenshot(driver, "oversize");
+//	    driver.switchTo().alert().accept();
 	    Assert.assertEquals(alert,"File size should not be greater than 3MB");
-	  //  Assert.assertTrue(docs.isFileSizeErrorDisplayed(),"Expected file-size validation message was not displayed");
 	    Reporter.log("large file size was rejected", true);
 	}
 	
